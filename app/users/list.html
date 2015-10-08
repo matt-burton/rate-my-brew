@@ -1,0 +1,35 @@
+<!--Body content-->
+<form>
+  <input type="search" ng-model="query" placeholder="filter users..." aria-label="filter friends" /><br/><br/>
+
+   Filter users
+
+	
+	 <select name="repeatSelect" id="repeatSelect" ng-model="queryh">
+		 <option value="">---Please select---</option> <!-- not selected / blank option -->
+      <option ng-repeat="user in users" value="{{user.first_name}}">{{user.first_name}}</option>
+    </select>
+   
+     <button id="clear-filter" ng-click="queryh = undefined" type="button">Clear Filter</button>
+            
+   <br/>
+   Order By:
+  	<select ng-model="orderProp">
+	  	 <option value="">---Please select---</option>
+  		<option value="first_name">Firstname</option>
+  		<option value="coffee_tea_pref">Coffee / Tea</option>
+	</select> <br/>
+</form>
+<br/><br/>
+	   <ul class="users">
+		   
+		   
+		   
+        <li ng-repeat="user in users | filter:query | orderBy:orderProp | filter:queryh" class="">
+      
+        
+        
+			{{user.first_name}} {{user.surname}} - Tea or coffee? {{user.coffee_tea_pref}} <a href="#/userview/{{user.id}}">details ></a></li>
+        </li>
+	   </ul>
+

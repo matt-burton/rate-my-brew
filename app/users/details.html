@@ -1,0 +1,24 @@
+<div ng-controller="UsersDetailsCtrl">
+
+
+
+  <input type="file" ngf-select="onFileSelect($files)" multiple>
+
+
+  
+  
+  
+  
+  <label>username: </label><input class="form-control" type="text" ng-model="userdatas[0].username"><br><label>password: </label><input class="form-control" type="text" ng-model="userdatas[0].password"><br><label>first_name: </label><input class="form-control" type="text" ng-model="userdatas[0].first_name"><br><label>surname: </label><input class="form-control" type="text" ng-model="userdatas[0].surname"><br><label>coffee_tea_pref: </label><input class="form-control" type="text" ng-model="userdatas[0].coffee_tea_pref"><br><label>coffee_sugar: </label><input class="form-control" type="text" ng-model="userdatas[0].coffee_sugar"><br><label>coffee_milk: </label><input class="form-control" type="text" ng-model="userdatas[0].coffee_milk"><br><label>coffeee_color: </label><input class="form-control" type="text" ng-model="userdatas[0].coffeee_color"><br><label>tea_sugar: </label><input class="form-control" type="text" ng-model="userdatas[0].tea_sugar"><br><label>tea_milk: </label><input class="form-control" type="text" ng-model="userdatas[0].tea_milk"><br><label>tea_color: </label><input class="form-control" type="text" ng-model="userdatas[0].tea_color"><br><label>coffee_bought_count: </label><input class="form-control" type="text" ng-model="userdatas[0].coffee_bought_count"><br><label>coffee_made_count: </label><input class="form-control" type="text" ng-model="userdatas[0].coffee_made_count"><br><label>average_brew_rating: </label><input class="form-control" type="text" ng-model="userdatas[0].average_brew_rating"><br><label>email: </label><input class="form-control" type="text" ng-model="userdatas[0].email"><br><label>gender: </label><input class="form-control" type="text" ng-model="userdatas[0].gender"><br> 
+	
+	
+	
+	     <button ng-click="uploadPic(picFile)">Submit</button>
+   <!-- <input type="submit" ng-click="update(userdatas[0])" value="Save"></form></div>  -->
+  <pre>user = {{userdatas[0] | json}}</pre>
+
+</div>
+
+
+
+ Details {{userId}}  {{ userdatas[0].first_name }}  {{ userdatas[0].surname }} </p>
